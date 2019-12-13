@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+
+            <TextView
+                android:id="@+id/mainTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/title"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.048"
+                tools:text="@string/title" />
+
+            <Spinner
+                android:id="@+id/spinnerAge"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="52dp"
+                android:layout_marginLeft="52dp"
+                android:layout_marginEnd="59dp"
+                android:layout_marginRight="59dp"
+                android:layout_marginBottom="587dp"
+                android:entries="@array/AgeRange"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.482"
+                app:layout_constraintStart_toEndOf="@+id/ageTitle"
+                app:layout_constraintTop_toBottomOf="@+id/mainTitle"
+                app:layout_constraintVertical_bias="0.234" />
+
+            <TextView
+                android:id="@+id/ageTitle"
+                android:layout_width="148dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="231dp"
+                android:layout_marginRight="231dp"
+                android:layout_marginBottom="575dp"
+                android:text="@string/age"
+                android:textSize="30sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mainTitle"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/genTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="42dp"
+                android:layout_marginBottom="514dp"
+                android:text="@string/gender"
+                android:textSize="30sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/ageTitle"
+                app:layout_constraintStart_toStartOf="@+id/ageTitle"
+                app:layout_constraintTop_toBottomOf="@+id/ageTitle" />
+
+            <TextView
+                android:id="@+id/smoker"
+                android:layout_width="144dp"
+                android:layout_height="58dp"
+                android:layout_marginTop="154dp"
+                android:layout_marginBottom="302dp"
+                android:text="@string/smoker"
+                android:textSize="30sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/genTitle"
+                app:layout_constraintStart_toStartOf="@+id/genTitle"
+                app:layout_constraintTop_toBottomOf="@+id/genTitle" />
+
+            <CheckBox
+                android:id="@+id/chkSmoker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="153dp"
+                android:layout_marginLeft="153dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="162dp"
+                android:layout_marginRight="162dp"
+                android:layout_marginBottom="315dp"
+                android:text="@string/smoke"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/smoker"
+                app:layout_constraintTop_toBottomOf="@+id/radGroup" />
+
+            <Button
+                android:id="@+id/btnCal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="128dp"
+                android:layout_marginBottom="126dp"
+                android:text="@string/cal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/smoker"
+                app:layout_constraintStart_toStartOf="@+id/smoker"
+                app:layout_constraintTop_toBottomOf="@+id/smoker" />
+
+            <Button
+                android:id="@+id/btnReset"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="126dp"
+                android:text="@string/reset"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/chkSmoker"
+                app:layout_constraintTop_toTopOf="@+id/btnCal" />
+
+            <RadioGroup
+                android:id="@+id/radGroup"
+                android:layout_width="154dp"
+                android:layout_height="124dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="62dp"
+                app:layout_constraintBottom_toTopOf="@+id/chkSmoker"
+                app:layout_constraintEnd_toEndOf="@+id/spinnerAge"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/spinnerAge"
+                app:layout_constraintTop_toBottomOf="@+id/spinnerAge"
+                app:layout_constraintVertical_bias="0.0">
+
+                <RadioButton
+                    android:id="@+id/radMale"
+                    android:layout_width="match_parent"
+                    android:layout_height="77dp"
+                    android:text="@string/male" />
+
+                <RadioButton
+                    android:id="@+id/radFem"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/female" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/data"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="76dp"
+                android:layout_marginBottom="33dp"
+                android:gravity="center"
+                android:textSize="36sp"
+                app:layout_constraintBottom_toTopOf="@+id/btnCal"
+                app:layout_constraintEnd_toEndOf="@+id/mainTitle"
+                app:layout_constraintStart_toStartOf="@+id/mainTitle"
+                app:layout_constraintTop_toBottomOf="@+id/smoker" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
